@@ -17,4 +17,10 @@ EDA that analyzes and visualizes Autism diagnosis based off the AQ-10 Questionna
 
 ### Model Training Accuracy vs Loss
 
-![image](https://user-images.githubusercontent.com/87671757/222826585-80c9eca4-4dee-426a-b0b9-99aa54fc824a.png)
+![image](https://user-images.githubusercontent.com/87671757/222828159-4e62f9fa-deac-4859-bbf8-2cb6bf429eb8.png)
+
+### Model Summary
+
+
+
+### Model Report
