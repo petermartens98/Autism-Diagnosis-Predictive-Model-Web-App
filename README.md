@@ -24,3 +24,5 @@ EDA that analyzes and visualizes Autism diagnosis based off the AQ-10 Questionna
 
 
 ### Model Report
+
+![image](https://user-images.githubusercontent.com/87671757/222828403-f62b74ab-322c-4449-97a4-c1f031f8fa38.png)
