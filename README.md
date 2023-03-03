@@ -6,6 +6,10 @@ EDA that analyzes and visualizes Autism diagnosis based off the AQ-10 Questionna
 
 ![image](https://user-images.githubusercontent.com/87671757/222827344-cfee8ef4-40f8-4f85-8e87-820668f506a3.png)
 
+###  Dataframe's Correlation Coefficients
+
+![image](https://user-images.githubusercontent.com/87671757/222827872-d0be248c-6c54-4e69-b413-ad140c69d4b2.png)
+
 ### AQ-10 Response Distribution
 
 ![image](https://user-images.githubusercontent.com/87671757/222827032-464d975f-c445-4c2d-b6a1-9774f19d3213.png)
