@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	
+	<nav class="nav-menu">
+		<h2>AQ-10 Autism Diagnosis App</h2>
+		<ul>
+			<li><a href="{{ url_for('index') }}">Home</a></li>
+			<li>About</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+	{% block content %}{% endblock %}
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

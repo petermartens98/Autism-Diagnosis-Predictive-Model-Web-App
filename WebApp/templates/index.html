@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+    <form method="POST" action="/submit" onsubmit="return validateForm()">
+        <div class="question">
+          <p class="q">1. I often notice small sounds when others do not.</p>
+          <div class="answer">
+            <label><input type="radio" name="q1" value="agree" {% if scores.A1_Score == 1 %}checked{% endif %}> Agree</label><br>
+            <label><input type="radio" name="q1" value="disagree" {% if scores.A1_Score == 0 %}checked{% endif %}> Disagree</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p class="q">2. When Im reading a story, I find it difficult to work out the characters intentions.</p>
+          <div class="answer">
+            <label><input type="radio" name="q2" value="agree" {% if scores.A2_Score == 1 %}checked{% endif %}> Agree</label><br>
+            <label><input type="radio" name="q2" value="disagree" {% if scores.A2_Score == 0 %}checked{% endif %}> Disagree</label>
+          </div>
+        </div>
+      
+        <div class="question">
+            <p class="q">3. I find it easy to "read between the lines" when someone is talking to me.</p>
+            <div class="answer">
+              <label><input type="radio" name="q3" value="agree" {% if scores.A3_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q3" value="disagree" {% if scores.A3_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">4. I usually concentrate more on the whole picture, rather than the small details.</p>
+            <div class="answer">
+              <label><input type="radio" name="q4" value="agree" {% if scores.A4_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q4" value="disagree" {% if scores.A4_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">5. I know how to tell if someone listening to me is getting bored.</p>
+            <div class="answer">
+              <label><input type="radio" name="q5" value="agree" {% if scores.A5_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q5" value="disagree" {% if scores.A5_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">6. I find it easy to do more than one thing at once.</p>
+            <div class="answer">
+              <label><input type="radio" name="q6" value="agree" {% if scores.A6_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q6" value="disagree" {% if scores.A6_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">7. I find it easy to work out what someone is thinking or feeling just by looking at their face.</p>
+            <div class="answer">
+              <label><input type="radio" name="q7" value="agree" {% if scores.A7_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q7" value="disagree" {% if scores.A7_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">8. If there is an interruption, I can switch back to what I was doing very quickly.</p>
+            <div class="answer">
+              <label><input type="radio" name="q8" value="agree" {% if scores.A8_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q8" value="disagree" {% if scores.A8_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">9. I like to collect information about categories of things.</p>
+            <div class="answer">
+              <label><input type="radio" name="q9" value="agree" {% if scores.A9_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q9" value="disagree" {% if scores.A9_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="q">10. I find it difficult to work out peoples intentions.</p>
+            <div class="answer">
+              <label><input type="radio" name="q10" value="agree" {% if scores.A10_Score == 1 %}checked{% endif %}> Agree</label><br>
+              <label><input type="radio" name="q10" value="disagree" {% if scores.A10_Score == 0 %}checked{% endif %}> Disagree</label>
+            </div>
+        </div>
+      
+        <button type="submit">Submit</button>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <p class="flashes">
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+            </p>
+          {% endif %}
+        {% endwith %}
+      </form>
+    <script>
+        function validateForm() {
+            var questions = document.querySelectorAll(".question");
+            var checked = true;
+            for (var i = 0; i < questions.length; i++) {
+                var radios = questions[i].querySelectorAll("input[type='radio']");
+                var answered = false;
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        answered = true;
+                        break;
+                    }
+                }
+                if (!answered) {
+                    checked = false;
+                    break;
+                }
+            }
+            if (!checked) {
+                alert("Please answer all questions before submitting.");
+                return false;
+            }
+        }
+
+    </script>
+    
+{% endblock %}
