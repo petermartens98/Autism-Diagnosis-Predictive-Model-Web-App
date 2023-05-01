@@ -1,8 +1,11 @@
 # Autism-Diagnosis-EDA-and-Predictive-Model
 
+### Link to Data
+
 ### App Deployment
 
-### File Descriptions
+### Description
+
 
 
 ### Web App Example Output
@@ -30,3 +33,8 @@
 ### Model Report
 
 ![image](https://user-images.githubusercontent.com/87671757/222828403-f62b74ab-322c-4449-97a4-c1f031f8fa38.png)
+
+
+### More About AQ-10
+
+### Relevant Links
