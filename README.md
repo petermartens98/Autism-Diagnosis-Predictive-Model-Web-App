@@ -1,8 +1,8 @@
 # Autism-Diagnosis-EDA-and-Predictive-Model
 
-## App Deployment
+### App Deployment
 
-## File Descriptions
+### File Descriptions
 
 
 ### Web App Example Output
