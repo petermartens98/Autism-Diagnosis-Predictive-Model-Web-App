@@ -1,10 +1,14 @@
 # Autism-Diagnosis-EDA-and-Predictive-Model
-This project analyzes and visualizes Autism diagnosis based off the AQ-10 Questionnaire. Then predictively modelling (Keras/TensorFlow) unseen instances of ASD with up to 98% accuracy. Lastly the Project is implemented into a autism prediction web application.
+
+## App Deployment
+
+## File Descriptions
 
 
 ### Web App Example Output
 
-![Screenshot 2023-04-06 192020](https://user-images.githubusercontent.com/87671757/230511105-f4f4215c-be49-4de2-a2f9-6bdeb13b146c.png)
+![image](https://user-images.githubusercontent.com/87671757/235525743-ff28a433-2c1f-49a0-95b4-3e9cc8ae87cc.png)
+
 
 ###  Dataframe's Correlation Coefficients
 
