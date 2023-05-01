@@ -1,4 +1,4 @@
-# Autism-Diagnosis-EDA-and-Predictive-Model
+# Autism Diagnosis Predictive Model Web App
 
 ### Link to Data
 
